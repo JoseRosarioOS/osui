@@ -1,18 +1,14 @@
 {
     "name": "@joserosarioos/osui",
-    "version": "2.4.0",
-    "description": "osui design system",
+    "version": "2.5.0",
+    "description": "Design System",
+    "license": "MIT",
     "repository": "joserosarioos/osui",
     "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "ds-julieo <jose.rosario@outsystems.com>",
     "keywords": [
         "tiny",
         "npm",
         "package",
         "bamblehorse"
-    ],
-    "license": "MIT"
+    ]
 }
