@@ -1,0 +1,86 @@
+@import "src/sass/Variables.scss";
+
+.btn {
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(169, 177, 184, 0.2);
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 600;
+    height: 32px;
+    justify-content: center;
+    min-width: 70px;
+    padding: 0 16px;
+    border: 1px solid #BCC3CB;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F7F8F9 100%);
+    
+}
+
+.btn:hover {
+    background-image: linear-gradient(180deg, #F6F6F7 0%, #EEF0F1 100%);    
+    border: 1px solid #B6BDC5;
+}
+
+.btn:active {
+    box-shadow: none;
+    background-image: linear-gradient(180deg, #EDEEEE 0%, #E6E7E9 100%); 
+    border: 1px solid #B0B7BF;   
+}
+
+.btn[disabled] {
+    color: #949DA5;    
+    border: 1px solid #D2D7DC;
+    box-shadow: none;
+    pointer-events: none;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F7F8F9 100%);
+}
+
+.btn-primary {
+    border: 1px solid #AA1100;
+    background-image: linear-gradient(180deg, #CC2200 0%, $color-brand 100%);  
+    color: #fff;
+}
+
+.btn-primary:hover {
+    border: 1px solid #991406;    
+    background-image: linear-gradient(180deg, #B62307 0%, #AA2007 100%);
+}
+
+.btn-primary:active {
+    border: 1px solid #8E1509;   
+    background-image: linear-gradient(180deg, #A9230A 0%, #9E210A 100%); 
+}
+
+.btn-primary[disabled] {
+    border: 1px solid #D48880;
+    color: var(--color-neutral-0);
+    background-image: linear-gradient(180deg, #E59080 0%, #DE8F80 100%);    
+}
+
+.btn-small {
+    height: 24px;
+    min-width: auto;
+    padding: 0 8px;
+}
+
+.btn-big {
+    height: 40px;
+    padding: 0 24px; /* TODO: Review padding in big Buttons*/
+}
+
+.btn-icon {
+    height: 24px;
+    min-width: auto;
+    padding: 0;
+    width: 24px;
+}
+
+/* TODO: Review final class for icons inside buttons */
+/* TODO: Review icon margin inside button when is not small */
+.btn .ds-preview-icon-button {
+    margin-right: 4px;
+}
+
+.btn-icon .ds-preview-icon-button {
+    margin-right: 0px;
+}
