@@ -2,59 +2,78 @@
 
 .btn {
     align-items: center;
-    border-radius: 4px;
-    box-shadow: 0px 1px 2px rgba(169, 177, 184, 0.2);
+    background: linear-gradient(180deg, var(--color-neutral-0) 0%, var(--color-neutral-1) 100%);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-neutral-4);
+    box-shadow: 0px 1px 2px rgba(34, 38, 42, 0.08);
+    color: var(--color-neutral-10); 
     cursor: pointer;
     display: inline-flex;
     font-weight: 600;
     height: 32px;
     justify-content: center;
     min-width: 70px;
-    padding: 0 16px;
-    border: 1px solid #BCC3CB;
-    background-image: linear-gradient(180deg, #FFFFFF 0%, #F7F8F9 100%);
-    
+    padding: 0 var(--space-base);
+    transition: all var(--time-m) var(--linear);
+}
+
+.dark-theme .btn {
+    background: linear-gradient(180deg, #2C2F32 0%, #22262A 100%);
+    border: 1px solid #626568;  
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    color: var(--color-neutral-2);  
 }
 
 .btn:hover {
-    background-image: linear-gradient(180deg, #F6F6F7 0%, #EEF0F1 100%);    
-    border: 1px solid #B6BDC5;
+    background: linear-gradient(180deg, #F6F6F6 0%, #EEEFF1 100%);  
+}
+
+.dark-theme .btn:hover {
+    background: linear-gradient(180deg, #34373A 0%, #2C2F33 100%);  
 }
 
 .btn:active {
+    background: linear-gradient(180deg, #ECEDED 0%, #E5E6E8 100%);
     box-shadow: none;
-    background-image: linear-gradient(180deg, #EDEEEE 0%, #E6E7E9 100%); 
-    border: 1px solid #B0B7BF;   
+}
+
+.dark-theme .btn:active {
+    background: linear-gradient(180deg, #3C3F42 0%, #35383C 100%);  
 }
 
 .btn[disabled] {
-    color: #949DA5;    
-    border: 1px solid #D2D7DC;
+    border: 1px solid var(--color-neutral-3);
     box-shadow: none;
+    color: var(--color-neutral-5);  
     pointer-events: none;
-    background-image: linear-gradient(180deg, #FFFFFF 0%, #F7F8F9 100%);
 }
 
-.btn-primary {
-    border: 1px solid #AA1100;
-    background-image: linear-gradient(180deg, #CC2200 0%, $color-brand 100%);  
-    color: #fff;
+.dark-theme .btn[disabled] {
+    background: linear-gradient(180deg, #2C2F32 0%, #22262A 100%);
+    border: 1px solid var(--color-neutral-8);  
+    color: var(--color-neutral-7);  
 }
 
-.btn-primary:hover {
+.btn-primary:not(.dark-theme) {
+    background: linear-gradient(180deg, var(--color-brand) 0%, #BC1F00 100%);
+    border: 1px solid var(--color-brand-dark);
+    color: var(--color-neutral-0);
+}
+
+.btn-primary:not(.dark-theme):hover {
     border: 1px solid #991406;    
-    background-image: linear-gradient(180deg, #B62307 0%, #AA2007 100%);
+    background: linear-gradient(180deg, #B62307 0%, #AA2007 100%);
 }
 
-.btn-primary:active {
-    border: 1px solid #8E1509;   
-    background-image: linear-gradient(180deg, #A9230A 0%, #9E210A 100%); 
+.btn-primary:not(.dark-theme):active {
+    background: linear-gradient(180deg, #A9230A 0%, #9E210A 100%);
+    border: 1px solid #8E1509;  
 }
 
-.btn-primary[disabled] {
+.btn-primary:not(.dark-theme)[disabled] {
+    background: linear-gradient(180deg, #E59080 0%, #DE8F80 100%);
     border: 1px solid #D48880;
     color: var(--color-neutral-0);
-    background-image: linear-gradient(180deg, #E59080 0%, #DE8F80 100%);    
 }
 
 .btn-small {
@@ -63,9 +82,9 @@
     padding: 0 8px;
 }
 
-.btn-big {
+.btn-large {
     height: 40px;
-    padding: 0 24px; /* TODO: Review padding in big Buttons*/
+    padding: 0 24px;
 }
 
 .btn-icon {
@@ -75,12 +94,44 @@
     width: 24px;
 }
 
-/* TODO: Review final class for icons inside buttons */
-/* TODO: Review icon margin inside button when is not small */
-.btn .ds-preview-icon-button {
-    margin-right: 4px;
+.btn [class^="osicon-"] {
+    margin-right: var(--space-xs);
 }
 
-.btn-icon .ds-preview-icon-button {
-    margin-right: 0px;
+.btn-icon [class^="osicon-"] {
+    margin-right: 0;
+}
+
+a.btn {
+   display: inline-flex;
+}
+
+.ponyfill-ready .btn {
+   display: inline-block;
+}
+
+.link {
+    color: var(--color-selection-5);
+    cursor: pointer;
+}
+
+.dark-theme .link {
+    color: var(--color-selection-2);  
+}
+
+.link:hover {
+    color: var(--color-selection-6);
+}
+
+.dark-theme .link:hover {
+    color: var(--color-selection-1);
+}
+
+.link[disabled] {
+    color: var(--color-neutral-5);
+    cursor: default;
+}
+
+.dark-theme .link[disabled] {
+    color: var(--color-neutral-7);
 }
